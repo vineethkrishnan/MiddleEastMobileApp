@@ -7,8 +7,17 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.phonegap.helloworld"
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "com.middleeast.packers"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.middleeast.packers"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.middleeast.packers"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "com.middleeast.packers"
     }
   },
   "dependent_plugins": {}
