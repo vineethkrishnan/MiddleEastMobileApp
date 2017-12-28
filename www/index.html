@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Packers</title>
+</head>
+<body class="theme-blue">
+<div id="app">
+    <!-- Statusbar -->
+    <!-- NOTE: You may need to comment out the next line depending on what device you're running on and see the app title cut off -->
+    <f7-statusbar></f7-statusbar>
+
+    <!-- Left Panel -->
+    <f7-panel left reveal layout="white">
+        <f7-view id="left-panel-view" navbar-through :dynamic-navbar="true">
+            <f7-navbar title="MEP" sliding></f7-navbar>
+            <f7-pages>
+                <f7-page>
+                    <f7-list>
+                        <f7-list-item link="/book/" title="Book Online" link-view="#main-view"
+                                      link-close-panel></f7-list-item>
+                        <f7-list-item link="/about/" title="About" link-view="#main-view"
+                                      link-close-panel></f7-list-item>
+                        <f7-list-item link="/services/" title="Our Services" link-view="#main-view"
+                                      link-close-panel></f7-list-item>
+                        <f7-list-item link="/contact/" title="Contact Us" link-view="#main-view"
+                                      link-close-panel></f7-list-item>
+                    </f7-list>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-panel>
+
+
+    <!-- Main Views -->
+    <f7-views>
+        <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
+            <!-- Navbar -->
+            <f7-navbar>
+                <f7-nav-left>
+                    <f7-link icon="icon-bars" open-panel="left"></f7-link>
+                </f7-nav-left>
+                <f7-nav-center sliding>Middle East Pakcers</f7-nav-center>
+                <f7-nav-right>
+                </f7-nav-right>
+            </f7-navbar>
+
+            <f7-pages>
+                <f7-page>
+                    <f7-card>
+                        <f7-card-header class="m-0 p-0">
+                            <img src="img/cardtitle.png" style="width: 100%">
+                        </f7-card-header>
+                        <f7-card-content class="mep-blue-bg">
+                            <f7-grid>
+                                <f7-col class="option-box">
+                                    <f7-link href="/book/">
+                                        <f7-card class="text-center">
+                                            <f7-card-content>
+                                                <f7-icon size="50" material="monetization_on"></f7-icon>
+                                            </f7-card-content>
+                                            <f7-card-footer class="text-center">
+                                                BOOK ONLINE
+                                            </f7-card-footer>
+                                        </f7-card>
+                                    </f7-link>
+                                </f7-col>
+                                <f7-col class="option-box">
+                                    <f7-link href="/about/">
+                                        <f7-card class="text-center">
+                                            <f7-card-content>
+                                                <f7-icon size="50" material="people"></f7-icon>
+                                            </f7-card-content>
+                                            <f7-card-footer class="text-center">
+                                                ABOUT US
+                                            </f7-card-footer>
+                                        </f7-card>
+                                    </f7-link>
+                                </f7-col>
+                            </f7-grid>
+                            <f7-grid>
+                                <f7-col class="option-box">
+                                    <f7-link href="/services/">
+                                        <f7-card class="text-center">
+                                            <f7-card-content>
+                                                <f7-icon size="50" material="settings"></f7-icon>
+                                            </f7-card-content>
+                                            <f7-card-footer class="text-center">
+                                                OUR SERVICES
+                                            </f7-card-footer>
+                                        </f7-card>
+                                    </f7-link>
+                                </f7-col>
+                                <f7-col class="option-box">
+                                    <f7-link href="/contact/">
+                                        <f7-card class="text-center">
+                                            <f7-card-content>
+                                                <f7-icon size="50" material="contact_phone"></f7-icon>
+                                            </f7-card-content>
+                                            <f7-card-footer class="text-center">
+                                                CONTACT US
+                                            </f7-card-footer>
+                                        </f7-card>
+                                    </f7-link>
+                                </f7-col>
+                            </f7-grid>
+                        </f7-card-content>
+                        <f7-card-footer class="mep-blue-bg text-center">
+                            <img src="img/aswaq.png" class="w-100 p-0 m-0"/>
+                        </f7-card-footer>
+                    </f7-card>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-views>
+
+    <!-- Popup -->
+    <f7-popup id="popup">
+        <f7-view navbar-fixed>
+            <f7-pages>
+                <f7-page>
+                    <f7-navbar title="Popup">
+                        <f7-nav-right>
+                            <f7-link close-popup>Close</f7-link>
+                        </f7-nav-right>
+                    </f7-navbar>
+                    <f7-block>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque, architecto. Cupiditate
+                        laudantium rem nesciunt numquam, ipsam. Voluptates omnis, a inventore atque ratione aliquam.
+                        Omnis iusto nemo quos ullam obcaecati, quod.
+                    </f7-block>
+                </f7-page>
+            </f7-pages>
+        </f7-view>
+    </f7-popup>
+
+</div>
+
+
+<!-- Book Online Template -->
+<template id="book">
+    <f7-page>
+        <f7-navbar title="Book Online" back-link="Back" sliding></f7-navbar>
+        <f7-block inner>
+            <f7-card>
+                <f7-card-header class="m-0 p-0">
+                    <img src="img/cardtitle.png" style="width: 100%">
+                </f7-card-header>
+                <f7-card-content class="mep-blue-bg">
+                    <f7-gird>
+                        <f7-col>
+                            <iframe src="" allowfu ref="map" id="map" style="width: 100%; height: 270px; border: 0"
+                                    frameborder="0" allowfullscreen></iframe>
+                        </f7-col>
+                    </f7-gird>
+                    <f7-gird>
+                        <f7-col>
+                            <form action="#" method="post" class="list-block inputs-list contact" @submit.prevent="contact">
+                                <ul>
+                                    <!-- Text Input -->
+                                    <f7-list-item>
+                                        <!--<f7-label floating>Source Address</f7-label>-->
+                                        <f7-input autocomplete="off" type="text" value="Saudia" class="form-control" id="source_address"
+                                                  name="source_address" required="required" placeholder="Source Address"/>
+                                    </f7-list-item>
+
+                                    <f7-list-item >
+                                        <!--<f7-label floating>Destination Address</f7-label>-->
+                                        <f7-input autocomplete="off" type="text" value="Saudia" class="form-control"
+                                                  id="destination_address" name="destination_address" required="required"
+                                                  placeholder="Destination Address"/>
+                                    </f7-list-item>
+
+                                    <!-- Select -->
+                                    <f7-list-item>
+                                        <!--<f7-label floating>Type of Goods</f7-label>-->
+                                        <f7-input type="select" smart-select autocomplete="off" required="required"
+                                                  class="form-control" id="type" name="type">
+                                            <option disabled="" selected="">Type of Goods</option>
+                                            <option value="Home Moving">Home Moving</option>
+                                            <option value="Office Moving">Office Moving</option>
+                                            <option value="Equipment">Equipment</option>
+                                            <option value="Furniture">Furniture</option>
+                                        </f7-input>
+                                    </f7-list-item>
+
+
+                                    <f7-list-item>
+                                        <!--<f7-label floating>Name</f7-label>-->
+                                        <f7-input autocomplete="off" type="text" class="form-control" id="name" name="name"
+                                                  placeholder="Name" required="required"/>
+                                    </f7-list-item>
+
+                                    <f7-list-item>
+                                        <!--<f7-label floating>Phone</f7-label>-->
+                                        <f7-input autocomplete="off" type="text" class="form-control" id="mobile"
+                                                  name="mobile" placeholder="Mobile" required="required"/>
+                                    </f7-list-item>
+
+                                    <f7-list-item>
+                                        <!--<f7-label floating>Email</f7-label>-->
+                                        <f7-input autocomplete="off" type="email" class="form-control" id="email"
+                                                  name="email" placeholder="Email" required="required"/>
+                                    </f7-list-item>
+
+                                    <f7-list-item>
+                                        <button type="submit" style="border-radius: 0; display: block"
+                                                class="button color-green  button-big button-fill w-100 text-center button-raised">
+                                            <span v-if="busy">
+                                                Sending...
+                                            </span>
+                                            <span v-else>SUBMIT</span>
+                                        </button>
+                                    </f7-list-item>
+                                </ul>
+                            </form>
+
+
+                        </f7-col>
+                    </f7-gird>
+                </f7-card-content>
+                <f7-card-footer class="mep-blue-bg text-center">
+                    <img src="img/aswaq.png" class="w-100 p-0 m-0"/>
+                </f7-card-footer>
+            </f7-card>
+        </f7-block>
+    </f7-page>
+</template>
+
+<!-- About Page Template -->
+<template id="about">
+    <f7-page>
+        <f7-navbar title="About" back-link="Back" sliding></f7-navbar>
+        <img src="img/title.png" class="w-100 m-0" >
+        <img :src="'img/about_'+i+'.png'" class="w-100 m-0" style="margin-top: -5px" v-for="i in 5">
+    </f7-page>
+</template>
+
+<!-- Service Page Template -->
+<template id="services">
+    <f7-page>
+        <f7-navbar title="Our Services" back-link="Back" sliding></f7-navbar>
+        <img src="img/cardtitle.png" style="width: 100%">
+        <f7-list class="m-0">
+            <f7-list-group>
+                <f7-list-item title="Moving and Packing Services" group-title></f7-list-item>
+                <f7-list-item title="Residences"></f7-list-item>
+                <f7-list-item title="Office, Corporate Buildings"></f7-list-item>
+                <f7-list-item title="On Site Packing Services"></f7-list-item>
+                <f7-list-item title="Warehouse Packing"></f7-list-item>
+                <f7-list-item title="Cold Chain Packing & Logistics <br />(Medical Equipment, MRIs,<br /> CT Scan, X-Rays etc.))"></f7-list-item>
+                <f7-list-item title="Hajj (Arafat & Muzdalifah)<br /> for Mobilization Project"></f7-list-item>
+                <f7-list-item title="Industrial & <br />Contracting Mobilization Projects"></f7-list-item>
+            </f7-list-group>
+            <f7-list-group>
+                <f7-list-item title="Logistics Services" group-title></f7-list-item>
+                <f7-list-item title="Sea & Airport Customs Clearance"></f7-list-item>
+                <f7-list-item title="Project Cargo"></f7-list-item>
+                <f7-list-item title="Dangerous & Perishable Cargo"></f7-list-item>
+                <f7-list-item title="Speed Cargo & Transportation"></f7-list-item>
+                <f7-list-item title="Industrial Crating & Palletizing"></f7-list-item>
+                <f7-list-item title="Freight Management & Forwarding"></f7-list-item>
+            </f7-list-group>
+            <f7-block class="font-bold text-center" inner>Move With Experts</f7-block></f7-block-content>
+        </f7-list>
+    </f7-page>
+</template>
+
+<!-- Contact Page Template -->
+<template id="contact">
+    <f7-page>
+        <f7-navbar title="Contact Us" back-link="Back" sliding></f7-navbar>
+        <img src="img/title.png" class="w-100 m-0" >
+        <img src="img/contact.png" class="w-100" style="margin-top: -5px" />
+        <f7-block inner class="m-0">
+            <f7-icon material="phonelink_ring"></f7-icon>
+            <f7-link external href="tel:0547502494"><f7-badge  color="green-bg">0547502494</f7-badge></f7-link>
+            <f7-link external href="tel:0569983075"><f7-badge  color="green-bg">0569983075</f7-badge></f7-link>
+        </f7-block>
+    </f7-page>
+</template>
+
+<script src="cordova.js"></script>
+<script src="js/framework7.min.js"></script>
+<script src="js/vue.min.js"></script>
+<script src="js/framework7-vue.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbO_a-DqJXccpIIqvGJAKvcRr7KXQK_eA&libraries=places">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/geocomplete/1.7.0/jquery.geocomplete.min.js"></script>
+<script>
+    (function () {
+        if (Framework7.prototype.device.android) {
+            Dom7('head').append(
+                '<link rel="stylesheet" href="css/framework7.material.min.css">' +
+                '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
+                '<link rel="stylesheet" href="css/app.css">'
+            );
+        }
+        else {
+            Dom7('head').append(
+                '<link rel="stylesheet" href="css/framework7.ios.min.css">' +
+                '<link rel="stylesheet" href="css/framework7.ios.colors.min.css">' +
+                '<link rel="stylesheet" href="css/app.css">'
+            );
+        }
+    })();
+</script>
+<script src="js/app.js"></script>
+</body>
+</html>
