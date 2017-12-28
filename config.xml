@@ -7,7 +7,7 @@
     <author email="vineeth@soarmorrow.com" href="http://soarmorrow.com">
         Vineeth N Krishnan
     </author>
-    <content src="www/index.html" />
+    <content src="index.html" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
